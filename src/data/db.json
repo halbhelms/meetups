@@ -2,6 +2,7 @@
   "meetups": [
     {
       "id": 1,
+      "canceled": false,
       "category": "animal welfare",
       "title": "Cat Adoption Day",
       "description": "Take in a new family member",
@@ -14,6 +15,7 @@
     },
     {
       "id": 2,
+      "canceled": false,
       "category": "homeless assistance",
       "title": "Winter Necessity Dropoff",
       "description": "Vegas is a cold city in winter. Help change that.",
