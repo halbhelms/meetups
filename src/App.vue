@@ -6,6 +6,15 @@
 </template>
 
 <style>
+body {
+  font-family: 'Andika New Basic', sans-serif;
+}
+
+h1,h2,h3 {
+  font-family: 'Lobster', sans-serif;
+  color:cadetblue;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
