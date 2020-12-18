@@ -1,5 +1,5 @@
 <template>
-  <h1>List of Upcoming Meetups</h1>
+  <h2>I am a meetup card</h2>
 </template>
 
 <script>

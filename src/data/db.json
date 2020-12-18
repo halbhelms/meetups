@@ -1,0 +1,28 @@
+{
+  "meetups": [
+    {
+      "id": 1,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Take in a new family member",
+      "location": "Meow City Pets",
+      "date": "January 22, 2021",
+      "time": "9.00",
+      "petsAllowed": true,
+      "bacciFriendly": true,
+      "organizer": "Demo Sthenes"
+    },
+    {
+      "id": 2,
+      "category": "homeless assistance",
+      "title": "Winter Necessity Dropoff",
+      "description": "Vegas is a cold city in winter. Help change that.",
+      "location": "Bellagio Parking Garage",
+      "date": "December 27, 2020",
+      "time": "9.00",
+      "petsAllowed": true,
+      "bacciFriendly": true,
+      "organizer": "Johnny B. Good"
+    }
+  ]
+}
