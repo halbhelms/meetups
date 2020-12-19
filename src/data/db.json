@@ -7,10 +7,10 @@
       "title": "Cat Adoption Day",
       "description": "Take in a new family member",
       "location": "Meow City Pets",
-      "date": "January 22, 2021",
+      "date": "2010-07-13T00:00:00.000Z",
       "time": "9.00",
       "petsAllowed": true,
-      "bacciFriendly": true,
+      "bacciFriendly": false,
       "organizer": "Demo Sthenes"
     },
     {
@@ -20,11 +20,51 @@
       "title": "Winter Necessity Dropoff",
       "description": "Vegas is a cold city in winter. Help change that.",
       "location": "Bellagio Parking Garage",
-      "date": "December 27, 2020",
+      "date": "2022-07-12T00:00:00.000Z",
       "time": "9.00",
       "petsAllowed": true,
       "bacciFriendly": true,
       "organizer": "Johnny B. Good"
+    },
+    {
+      "id": 3,
+      "canceled": false,
+      "category": "homeless assistance",
+      "title": "Teach the Homeless",
+      "description": "In association with UNLV, we will be providing graduate-level study of Quantum Luck to the homeless",
+      "location": "New Age Center",
+      "date": "2023-07-12T00:00:00.000Z",
+      "time": "11.00",
+      "petsAllowed": true,
+      "bacciFriendly": true,
+      "organizer": "Demo Sthenes"
+    },
+    {
+      "id": 4,
+      "canceled": true,
+      "category": "animal welfare",
+      "title": "Rattlesnake Roundup",
+      "description": "Rattlesnakes are misunderstood creatures, longing only to be cared for by a person with pets.",
+      "location": "Red Rock Casino",
+      "date": "2022-07-12T00:00:00.000Z",
+      "time": "11.00",
+      "petsAllowed": true,
+      "bacciFriendly": true,
+      "organizer": "Johnny B. Good"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Johnny B. Good"
+    },
+    {
+      "id": 2,
+      "name": "Shallow Hal"
+    },
+    {
+      "id": 3,
+      "name": "Hosey Hoserson"
     }
   ]
 }

@@ -1,12 +1,16 @@
 <template>
-  <h1>List of Upcoming Meetups</h1>
   <MeetupList />
 </template>
 
 <script>
 import MeetupList from '../components/MeetupList'
 export default {
-  components: {MeetupList}
+  components: {MeetupList},
+  data() {
+    return {
+      meetups: [],
+    }
+  }
 }
 </script>
 
