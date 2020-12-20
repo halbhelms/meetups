@@ -23,7 +23,7 @@ h1,h2,h3 {
   color: #2c3e50;
 }
 
-#nav {
+/* #nav {
   padding: 30px;
 }
 
@@ -34,5 +34,5 @@ h1,h2,h3 {
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>
