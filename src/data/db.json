@@ -51,6 +51,42 @@
       "petsAllowed": true,
       "bacciFriendly": false,
       "organizer": "Johnny B. Good"
+    },
+    {
+      "title": "Quantum Luck Lecture",
+      "description": "Change your life by changing your universe",
+      "category": "gambling bonanza",
+      "location": "Bellagio Ballroom A",
+      "date": "2020-12-25T09:00",
+      "time": null,
+      "petsAllowed": "false",
+      "bacciFriendly": true,
+      "organizer": "Johnny B. Good",
+      "id": 5
+    },
+    {
+      "title": "Democrats for Trump",
+      "description": "He was robbed!",
+      "category": "gambling bonanza",
+      "location": "Trump Tower",
+      "date": "2020-12-23T21:12",
+      "time": null,
+      "petsAllowed": "true",
+      "bacciFriendly": true,
+      "organizer": "Johnny B. Good",
+      "id": 6
+    },
+    {
+      "title": "Rachel Maddow Fanclub",
+      "description": "She's the best!",
+      "category": "homeless assistance",
+      "location": "Red Rock Casino",
+      "date": "2020-12-31T09:00",
+      "time": null,
+      "petsAllowed": "false",
+      "bacciFriendly": true,
+      "organizer": "Shallow Hal",
+      "id": 7
     }
   ],
   "users": [

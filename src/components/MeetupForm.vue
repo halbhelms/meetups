@@ -4,7 +4,7 @@
     <div class="input-control">
       <span class="label">Who are you?</span>
       <span class="form-control">
-        <select name="user" :bind="meetup.organizer">
+        <select v-model="meetup.organizer">
           <option value="0">Please choose a user</option>
           <option v-for="user in users" :key="user.id" :value="user.name">
             {{ user.name }}
@@ -30,9 +30,9 @@
     <div class="input-control">
       <span class="label">Category:</span>
       <span class="form-control">
-        <select name="category" :bind="meetup.category">
+        <select v-model="meetup.category">
           <option value="0">Please choose a category</option>
-          <option v-for="category in categories" :value="meetup.category" :key="category">{{ category }}</option>
+          <option v-for="category in categories" :value="category" :key="category">{{ category }}</option>
         </select>
       </span>
     </div>
@@ -40,7 +40,7 @@
     <div class="input-control">
       <span class="label">Date:</span>
       <span class="form-control">
-        <input type="date" v-model="date">
+        <input type="datetime-local" v-model="meetup.date">
       </span>
     </div>
     <!-- meetup.location -->
@@ -50,37 +50,30 @@
         <input type="text" v-model="meetup.location">
       </span>
     </div>
-    <!-- meetup.time -->
-    <div class="input-control">
-      <span class="label">Time:</span>
-      <span class="form-control">
-        <input type="time" v-model="meetup.time">
-      </span>
-    </div>
     <!-- meetup.petsAllowed -->
     <div class="input-control">
       <span class="label">Pets Allowed?</span>
       <span class="form-control">
-        <input type="checkbox" name="pets" value="true" v-model="meetup.petsAllowed">
-        <label>Yes</label>
+        <input type="radio" name="petsAllowed" value="true" v-model="meetup.petsAllowed"> Yes
+        <input type="radio" name="petsAllowed" value="false" v-model="meetup.petsAllowed"> No
       </span>
     </div>
     <!-- meetup.bacciFriendly -->
     <div class="input-control">
       <span class="label">Baccy friendly?</span>
       <span class="form-control">
-        <input type="checkbox" value="true" name="pets" v-model="meetup.bacciFriendly">
+        <input type="checkbox" v-model="meetup.bacciFriendly">
         <label>Yes</label>
       </span>
     </div>
-    <!-- meetup.bacciFriendly -->
+    <!-- submit button -->
     <div class="input-control">
       <span class="label"></span>
       <span class="form-control">
-        <button>Create the Meetup</button>  
+        <button @click="notifyParent">Create the Meetup</button>  
       </span>
     </div>
-
+  {{meetup}}
   </div>
 </template>
 
@@ -96,14 +89,13 @@ export default {
       required: true
     }
   },
-  mounted() {
-    this.$watch('date', (newVal) => {
-      this.meetup.date = new Date(newVal)
-    })
+  methods: {
+    notifyParent() {
+      this.$emit('meetup-added', this.meetup)
+    }
   },
   data() {
     return {
-      date: null,
       meetup: {
         title: null,
         description: null,
@@ -111,7 +103,7 @@ export default {
         location: null,
         date: null,
         time: null,
-        petsAllowed: false,
+        petsAllowed: null,
         bacciFriendly: true,
         organizer: null
       }

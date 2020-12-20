@@ -1,6 +1,6 @@
 <template>
   <h1>Add a Meetup</h1>
-    <MeetupForm v-if="dataReady" :users="users" :categories="categories"/>
+    <MeetupForm v-if="dataReady" :users="users" :categories="categories" @meetup-added="addMeetup"/>
 </template>
 
 <script>
@@ -17,6 +17,12 @@ export default {
   },
   components: {
     MeetupForm
+  },
+  methods: {
+    addMeetup(meetup) {
+      axios.post('http://localhost:3000/meetups/', meetup)
+        .then(this.$router.push({name: 'Home'}))
+    }
   },
   created() {
     axios.get('http://localhost:3000/users/?canceled=false')
