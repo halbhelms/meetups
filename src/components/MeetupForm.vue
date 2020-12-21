@@ -1,4 +1,5 @@
 <template>
+  {{ meetup }}
   <div class="form">
     <!-- meetup.organizer -->
     <div class="input-control">
@@ -26,6 +27,7 @@
         <input type="text" v-model="meetup.description">
       </span>
     </div>
+ 
     <!-- meetup.category -->
     <div class="input-control">
       <span class="label">Category:</span>
@@ -36,13 +38,15 @@
         </select>
       </span>
     </div>
-    <!-- meetup.date -->
+ 
+    <!-- meetup.datetime -->
     <div class="input-control">
       <span class="label">Date:</span>
       <span class="form-control">
         <input type="datetime-local" v-model="meetup.date">
       </span>
     </div>
+ 
     <!-- meetup.location -->
     <div class="input-control">
       <span class="label">Location:</span>
@@ -50,14 +54,16 @@
         <input type="text" v-model="meetup.location">
       </span>
     </div>
+  
     <!-- meetup.petsAllowed -->
     <div class="input-control">
       <span class="label">Pets Allowed?</span>
       <span class="form-control">
-        <input type="radio" name="petsAllowed" value="true" v-model="meetup.petsAllowed"> Yes
-        <input type="radio" name="petsAllowed" value="false" v-model="meetup.petsAllowed"> No
+        <input type="radio" name="petsAllowed" :value="true" v-model="meetup.petsAllowed"> Yes
+        <input type="radio" name="petsAllowed" :value="false" v-model="meetup.petsAllowed"> No
       </span>
     </div>
+  
     <!-- meetup.bacciFriendly -->
     <div class="input-control">
       <span class="label">Baccy friendly?</span>
@@ -66,19 +72,29 @@
         <label>Yes</label>
       </span>
     </div>
-    <!-- submit button -->
-    <div class="input-control">
+  
+    <!-- add button -->
+    <div class="input-control" v-if="!meetup.id">
       <span class="label"></span>
       <span class="form-control">
-        <button @click="notifyParent">Create the Meetup</button>  
+        <button @click="notifyParent('added')">Create the Meetup</button>  
       </span>
     </div>
-  {{meetup}}
+  
+    <!-- edit button -->
+    <div class="input-control" v-if="meetup.id">
+      <span class="label"></span>
+      <span class="form-control">
+        <button @click="notifyParent('edited')">Edit the Meetup</button>  
+      </span>
+    </div>
+  
   </div>
 </template>
 
 <script>
 export default {
+  
   props: {
     users: {
       type: Array,
@@ -87,13 +103,23 @@ export default {
     categories: {
       type: Array,
       required: true
+    },
+    meetupToEdit: {
+      type: Object,
+      required: false
     }
   },
+  
   methods: {
-    notifyParent() {
-      this.$emit('meetup-added', this.meetup)
+    notifyParent(mode) {
+      this.$emit(`meetup-${mode}`, this.meetup)
     }
   },
+
+  created() {
+    this.$watch('meetupToEdit', newVal => this.meetup = newVal)
+  },
+
   data() {
     return {
       meetup: {
@@ -103,8 +129,8 @@ export default {
         location: null,
         date: null,
         time: null,
-        petsAllowed: null,
-        bacciFriendly: true,
+        petsAllowed: false,
+        bacciFriendly: false,
         organizer: null
       }
     }

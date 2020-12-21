@@ -2,91 +2,19 @@
   "meetups": [
     {
       "id": 1,
-      "canceled": false,
-      "category": "animal welfare",
-      "title": "Cat Adoption Day",
-      "description": "Take in a new family member",
-      "location": "Meow City Pets",
-      "date": "2010-07-13T00:00:00.000Z",
-      "time": "9.00",
-      "petsAllowed": true,
-      "bacciFriendly": false,
-      "organizer": "Demo Sthenes"
+      "title": "Meetup 1"
     },
     {
       "id": 2,
-      "canceled": false,
-      "category": "homeless assistance",
-      "title": "Winter Necessity Dropoff",
-      "description": "Vegas is a cold city in winter. Help change that.",
-      "location": "Bellagio Parking Garage",
-      "date": "2022-07-12T00:00:00.000Z",
-      "time": "9.00",
-      "petsAllowed": true,
-      "bacciFriendly": true,
-      "organizer": "Johnny B. Good"
+      "title": "Meetup 2"
     },
     {
       "id": 3,
-      "canceled": false,
-      "category": "homeless assistance",
-      "title": "Teach the Homeless",
-      "description": "In association with UNLV, we will be providing graduate-level study of Quantum Luck to the homeless",
-      "location": "New Age Center",
-      "date": "2023-07-12T00:00:00.000Z",
-      "time": "11.00",
-      "petsAllowed": true,
-      "bacciFriendly": true,
-      "organizer": "Demo Sthenes"
+      "title": "Meetup 3"
     },
     {
-      "id": 4,
-      "canceled": true,
-      "category": "animal welfare",
-      "title": "Rattlesnake Roundup",
-      "description": "Rattlesnakes are misunderstood creatures, longing only to be cared for by a person with pets.",
-      "location": "Red Rock Casino",
-      "date": "2022-07-12T00:00:00.000Z",
-      "time": "11.00",
-      "petsAllowed": true,
-      "bacciFriendly": false,
-      "organizer": "Johnny B. Good"
-    },
-    {
-      "title": "Quantum Luck Lecture",
-      "description": "Change your life by changing your universe",
-      "category": "gambling bonanza",
-      "location": "Bellagio Ballroom A",
-      "date": "2020-12-25T09:00",
-      "time": null,
-      "petsAllowed": "false",
-      "bacciFriendly": true,
-      "organizer": "Johnny B. Good",
-      "id": 5
-    },
-    {
-      "title": "Democrats for Trump",
-      "description": "He was robbed!",
-      "category": "gambling bonanza",
-      "location": "Trump Tower",
-      "date": "2020-12-23T21:12",
-      "time": null,
-      "petsAllowed": "true",
-      "bacciFriendly": true,
-      "organizer": "Johnny B. Good",
-      "id": 6
-    },
-    {
-      "title": "Rachel Maddow Fanclub",
-      "description": "She's the best!",
-      "category": "homeless assistance",
-      "location": "Red Rock Casino",
-      "date": "2020-12-31T09:00",
-      "time": null,
-      "petsAllowed": "false",
-      "bacciFriendly": true,
-      "organizer": "Shallow Hal",
-      "id": 7
+      "id": 5,
+      "title": "Meetup 5"
     }
   ],
   "users": [
@@ -101,6 +29,10 @@
     {
       "id": 3,
       "name": "Hosey Hoserson"
+    },
+    {
+      "id": 4,
+      "name": "Demo Sthenes"
     }
   ],
   "categories": [
