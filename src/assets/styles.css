@@ -1,0 +1,16 @@
+
+@tailwind base;
+@tailwind components;
+
+/* not working currently */
+@import 'individual.css';
+
+.h3 {
+    @apply text-red-600 text-3xl;
+}
+
+.body {
+    @apply ml-12;
+}
+/* vvvv end file with this vvvv */
+@tailwind utilities;

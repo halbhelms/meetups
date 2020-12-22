@@ -1,0 +1,7 @@
+.h3 {
+    @apply text-red-600 text-3xl;
+}
+
+.body {
+    @apply ml-12;
+}

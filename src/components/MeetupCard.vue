@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div id="header">
-      <h3>{{ meetup.title }}</h3>
+      <h3 class="h3">{{ meetup.title }}</h3>
       <img src="../assets/edit.jpeg" width="16" @click="edit(meetup)">
       <img src="../assets/delete.jpeg" width="16" @click="remove(meetup.id)">
     </div>
@@ -65,7 +65,7 @@ export default {
     grid-template-columns: 80% 10% 10%
   }
 
-  .card {
+  ._card {
     border: 1px solid navy;
     margin-bottom: 6px;
     width: 300px;
@@ -74,11 +74,11 @@ export default {
     padding: 6px;
   }
 
-  p{
+  p.bob{
     text-align: left;
   }
 
-  img {
+  img.uncle {
     margin-top: 20px;
     cursor: pointer;
   }
