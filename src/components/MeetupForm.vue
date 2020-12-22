@@ -1,5 +1,4 @@
 <template>
-  {{ meetup }}
   <div class="form">
     <!-- meetup.organizer -->
     <div class="input-control">
@@ -109,6 +108,8 @@ export default {
       required: false
     }
   },
+
+  emits:['meetup-added', 'meetup-edited'],
   
   methods: {
     notifyParent(mode) {

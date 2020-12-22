@@ -22,7 +22,7 @@ export default {
     }
   },
 
-  emits: ['meetup:deleted'],
+emits: ['meetup:deleted'],
 
   methods: {
     removeMeetup(meetupId) {

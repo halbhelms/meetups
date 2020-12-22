@@ -5,6 +5,7 @@
   <router-view />
 </template>
 
+
 <style>
 body {
   font-family: 'Andika New Basic', sans-serif;

@@ -3,18 +3,6 @@
     {
       "id": 1,
       "title": "Meetup 1"
-    },
-    {
-      "id": 2,
-      "title": "Meetup 2"
-    },
-    {
-      "id": 3,
-      "title": "Meetup 3"
-    },
-    {
-      "id": 5,
-      "title": "Meetup 5"
     }
   ],
   "users": [

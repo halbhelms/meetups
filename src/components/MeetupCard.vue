@@ -25,7 +25,13 @@ export default {
     }
   },
 
+  inject: ['testMethod'],
+
   emits: ['meetup:deleted'],
+
+  created() {
+    // this.testMethod()
+  },
 
   methods: {
     formattedDate(dateString) {
@@ -42,6 +48,7 @@ export default {
     },
 
     remove(meetupId) {
+      this.testMethod('Why hate the white man?')
       deleteMeetup(meetupId)
         .then( () => {
           this.$emit('meetup:deleted', meetupId)

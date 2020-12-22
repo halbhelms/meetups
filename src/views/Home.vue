@@ -5,6 +5,7 @@
 <script>
 import { getMeetups } from '../services/APIservice'
 import MeetupList from '../components/MeetupList'
+
 export default {
   
   components: {MeetupList},
@@ -20,8 +21,8 @@ export default {
       this.meetups = this.meetups.filter( meetup => meetup.id !== meetupId)
     },
 
-    testMethod() {
-      console.log('Here in testMethod')
+    testMethod(msg) {
+      console.log('Here in testMethod', msg)
     }
   },
 

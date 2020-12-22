@@ -20,9 +20,6 @@ export default {
       updateMeetup(meetup)
         .then(this.$router.push({name: 'Home'}))
         .catch( error => console.log('Error', error))
-      // axios.put(`http://localhost:3000/meetups/${meetup.id}`, meetup)
-      //   .then(this.$router.push({name: 'Home'}))
-      //   .catch( error => console.log('Error', error))
     }
   },
 
@@ -36,7 +33,6 @@ export default {
 
   created() {
     // Just a test
-    // console.log(`from APIService`, doThis())
     // get meetup to edit
     axios.get(`http://localhost:3000/meetups/${this.$route.params.meetupId}`)
       .then( meetup => this.meetup = meetup.data)
